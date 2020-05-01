@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+    <link rel="stylesheet" href="canecllation (international)/cxl-inter-style.css">
+</head>
+<body>
+    <!--Cancellation Section Start -->
+    <section id="cxl">
+        <a href="index.html" class="back"><i class="fas fa-arrow-left"></i>Main Page</a>
+        <div class="cxl-header">
+            <h1>Cancellation <span>(International)</span></h1>
+        </div>
+        <div class="cxl-items">
+            <div class="cxl-item" id="enCxlFees">
+                <span class="fees-item" id="uiEnAdtPen"></span>
+                <span class="fees-item" id="uiEnChdPen"></span>
+                <span class="fees-item" id="uiEnInfPen"></span>
+                <span class="fees-item" id="uiEnMosFees"></span>
+                <span class="fees-item" id="uiEnNonReftaxes"></span>
+                <span class="fees-item" id="uiEnAdtsFees"></span>
+                <span class="fees-item" id="uiEnChdfees"></span>
+                <span class="fees-item" id="uiEnInfFees"></span>
+                <span class="fees-item" id="uiEnTotalFees"></span>
+                <span class="fees-item" id="uiEnUsedFare"></span>
+                <span class="fees-item" id="uiEnServiceFees"></span>
+                <span class="fees-item" id="uiEnPromotion"></span>
+                <span class="fees-item" id="uiEnTotalDeducted"></span>
+                <span class="fees-item" id="uiEnRefundAmount"></span>
+            </div>
+            <div class="cxl-item" id="main-item">
+                <div class="cxl-inputs">
+                    <input type="number" value="" class="cxl-input" id="cxlAdtPen" placeholder="*Adult Penalty">
+                    <input type="number" value="" class="cxl-input" id="cxlAdtNum" placeholder="*Adults Number">
+                    <input type="number" value="" class="cxl-input" id="cxlChdPen" placeholder="Child Penalty">
+                    <input type="number" value="" class="cxl-input" id="cxlChdNum" placeholder="Children Number">
+                    <input type="number" value="" class="cxl-input" id="cxlInfPen" placeholder="Infant Penalty">
+                    <input type="number" value="" class="cxl-input" id="cxlInfNum" placeholder="Infants Number">
+                    <input type="number" value="" class="cxl-input" id="cxlMf" placeholder="*Almosafer Fees">
+                    <input type="number" value="" class="cxl-input" id="cxlNonRef" placeholder="Non-refundable Taxes">
+                    <input type="number" value="" class="cxl-input" id="cxlUsedFare" placeholder="Used Fare">
+                    <input type="number" value="" class="cxl-input" id="serviceFees" placeholder="Service Fees">
+                    <input type="number" value="" class="cxl-input" id="promotion" placeholder="Promotion">
+                    <input type="number" class="cxl-input" id="bookingAmount" placeholder="*Booking Amount">
+                </div>
+                <div class="cxlCurrency">
+                    <select name="" id="cxlEnCurrency">
+                        <option value="choose currency" disabled selected hidden>choose currency</option>
+                        <option value="SAR">Saudi Riyal</option>
+                        <option value="KWD">kuwaiti Dinar</option>
+                        <option value="AED">Emirati Dirham</option>
+                        <option value="BHD">Bahraini Dinar</option>
+                        <option value="EGP">Egyption Pound</option>
+                    </select>
+
+                    <select name="" id="cxlArCurrency">
+                        <option value="أختر العملة" disabled selected hidden>أختر العملة</option>
+                        <option value="ريال سعودي">ريال سعودي</option>
+                        <option value="دينار كويتي">دينار كويتي</option>
+                        <option value="درهم إماراتي">درهم إماراتي</option>
+                        <option value="دينار بحريني">دينار بحريني</option>
+                        <option value="جنيه مصري">جنيه مصري</option>
+                    </select>
+                </div>
+                <div class="cxl-buttons">
+                    <button class="cxl-btn" id="clearCxlBtn">Clear</button>
+                    <button class="cxl-btn" id="calcCxlBtn">Calculate</button>
+                </div>
+                <div id="cxlResult">
+                     
+                </div>
+            </div>
+            <div class="cxl-item" id="arCxlFees">
+                <span class="fees-item" id="uiArAdtPen"></span>
+                <span class="fees-item" id="uiArChdPen"></span>
+                <span class="fees-item" id="uiArInfPen"></span>
+                <span class="fees-item" id="uiArMosFees"></span>
+                <span class="fees-item" id="uiArNonReftaxes"></span>
+                <span class="fees-item" id="uiArAdtsFees"></span>
+                <span class="fees-item" id="uiArChdfees"></span>
+                <span class="fees-item" id="uiArInfFees"></span>
+                <span class="fees-item" id="uiArTotalFees"></span>
+                <span class="fees-item" id="uiArUsedFare"></span>
+                <span class="fees-item" id="uiArServiceFees"></span>
+                <span class="fees-item" id="uiArPromotion"></span>
+                <span class="fees-item" id="uiArTotalDeducted"></span>
+                <span class="fees-item" id="uiArRefundAmount"></span>
+            </div>
+        </div>
+    </section>
+    <!--Cancellation Section End -->
+    <script src="canecllation (international)/cancellation-inter.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="change (domestic)/chg-dom-style.css">
+</head>
+<body>
+    <!-- Change Section Start -->
+    <section id="change">
+        <a href="index.html" class="back"><i class="fas fa-arrow-left"></i>Main Page</a>
+        <div id="header">
+            <h1>Amendment <span>(Domestic)</span></h1>
+        </div>
+        <div id="chnage-container">
+            <div id="english">
+                <div id="english-fees">
+                    <span id="uiEnAdtAlFees"></span>
+                    <span id="uiEnChdAlFees"></span>
+                    <span id="uiEnInfAlFees"></span>
+                    <span id="uiEnAdtFd"></span>
+                    <span id="uiEnChdFd"></span>
+                    <span id="uiEnInfFd"></span>
+                    <span id="uiEnMosaferFees"></span>
+                    <span id="uiEnNonRefTaxes"></span>
+                    <span id="uiEnTotalAdtFees"></span>
+                    <span id="uiEnTotalChdFees"></span>
+                    <span id="uiEnTotalInfFees"></span>
+                    <span id="uiEnVat"></span>
+                    <span id="uiEnTotalForAll"></span>
+                </div>
+            </div>
+            <div id="change-calc">
+                <div id="inputs">
+                        <input type="number" value="" class="input" id="adulte" placeholder="*Adult Penalty">
+                        <input type="number" value="" class="input" id="adtDiff" placeholder="Adult Differance">
+                        <input type="number" value="" class="input" id="adtNumber" placeholder="*Adults Number">
+                        <input type="number" value="" class="input" id="child" placeholder="Child Penalty">
+                        <input type="number" value="" class="input" id="chdDiff" placeholder="Child Differance">
+                        <input type="number" value="" class="input" id="chdNumber" placeholder="Children Number">
+                        <input type="text" value="" class="input" id="infant" placeholder="Infant Penalty">
+                        <input type="text" value="" class="input" id="infDiff" placeholder="Infant Differance">
+                        <input type="number" value="" class="input" id="infNumber" placeholder="Infants Number">
+                        <input type="number" value="" class="input" id="mf" placeholder="*Almosafer Fees">
+                        <input type="number" value="" class="input" id="tax" placeholder="Non-refundable Taxes">
+                        
+                </div>
+
+                <div class="chgCurrency">
+                    <select name="" id="chgEnCurrency">
+                        <option value="choose currency" disabled selected hidden>choose currency</option>
+                        <option value="SAR">Saudi Riyal</option>
+                        <option value="KWD">kuwaiti Dinar</option>
+                        <option value="AED">Emirati Dirham</option>
+                        <option value="BHD">Bahraini Dinar</option>
+                        <option value="EGP">Egyption Pound</option>
+                    </select>
+                
+                    <select name="" id="chgArCurrency">
+                        <option value="أختر العملة" disabled selected hidden>أختر العملة</option>
+                        <option value="ريال سعودي">ريال سعودي</option>
+                        <option value="دينار كويتي">دينار كويتي</option>
+                        <option value="درهم إماراتي">درهم إماراتي</option>
+                        <option value="دينار بحريني">دينار بحريني</option>
+                        <option value="جنيه مصري">جنيه مصري</option>
+                    </select>
+                </div>
+
+                <div id="btns">
+                    <button class="btn" id="clear">Clear</button>
+                    <button class="btn" id="calc">Calculate</button>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div id="arabic">
+                <div id="arabic-fees">
+                    <span id="uiArAdtAlFees"></span>
+                    <span id="uiArChdAlFees"></span>
+                    <span id="uiArInfAlFees"></span>
+                    <span id="uiArAdtFd"></span>
+                    <span id="uiArChdFd"></span>
+                    <span id="uiArInfFd"></span>
+                    <span id="uiArMosaferFees"></span>
+                    <span id="uiArNonRefTaxes"></span>
+                    <span id="uiArTotalAdtFees"></span>
+                    <span id="uiArTotalChdFees"></span>
+                    <span id="uiArTotalInfFees"></span>
+                    <span id="uiArVat"></span>
+                    <span id="uiArTotalForAll"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Change Section End -->
+    <script src="change (domestic)/change-dom.js"></script>
+</body>
+</html>

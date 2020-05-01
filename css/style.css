@@ -1,0 +1,91 @@
+/* General Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #bdc3c7;
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+	background: linear-gradient(to right, #2c3e50, #bdc3c7);
+	display: flex;
+	flex-direction: column;
+	font-family: 'Dosis', sans-serif;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+#cover {
+	position: relative;
+	height: 100vh;
+}
+
+.container {
+	width: 90vw;
+	margin: auto;
+	/* background-color: chartreuse; */
+}
+
+.header {
+	text-align: center;
+	font-size: 6.5rem;
+	font-family: 'Rubik', sans-serif !important;
+	margin-bottom: 4.5rem;
+	margin-top: 2rem;
+}
+
+.generator-items {
+	/* background-color: chocolate; */
+	width: 50vw;
+	height: 50vh;
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 2.5rem;
+	text-align: center;
+	color: black;
+}
+
+.generator-item {
+	width: 20vw;
+	/* background-color: crimson; */
+	margin-bottom: 3rem;
+	font-size: 3rem;
+	font-weight: 900;
+	border: 3px solid black;
+	border-radius: 20px;
+	transition: all .5s;
+}
+
+.generator-item span {
+	font-weight: normal;
+	font-size: 2rem;
+}
+
+.generator-item:hover {
+	color: #bdc3c7;
+	background-color: #000;
+}
+
+#AppInfo {
+	/* background-color: aqua; */
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1rem;
+	font-weight: 500;
+}
+
+#AppInfo span {
+	font-size: 1.1rem;
+	font-weight: 600;
+}

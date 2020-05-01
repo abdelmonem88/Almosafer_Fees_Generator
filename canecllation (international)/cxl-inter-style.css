@@ -1,0 +1,226 @@
+/* General Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #bdc3c7;
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+	background: linear-gradient(to right, #2c3e50, #bdc3c7);
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.fa-arrow-circle-down {
+	position: absolute;
+}
+
+::placeholder{
+	font-size: 1.2rem;
+}
+
+/* Canellation Section Start  */
+
+#cxl {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	/* background-color: lightgreen; */
+}
+
+.back {
+	position: absolute;
+	left: 2rem;
+	top: 1rem;
+	border: 2px solid #000;
+	padding: .5rem;
+	border-radius: 20px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	transition: all .5s;
+	color: black;
+	text-decoration: none;
+}
+
+.back i {
+	margin-right: .5rem;
+}
+
+.back:hover {
+	color: #bdc3c7;
+	background-color: #000;
+}
+
+.cxl-header {
+	padding: .5rem;
+	text-align: center;
+	font-size: 4rem;
+	letter-spacing: 2px;
+	font-family: 'Dosis', sans-serif !important;
+	/* background-color: lightgrey; */
+}
+
+.cxl-header span {
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.cxl-items {
+	/* background-color: lightpink; */
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.cxl-item {
+	width: 32vw;
+}
+
+#enCxlFees {
+	/* background-color: mediumblue; */
+	height: 36rem;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5rem;
+	list-style: none;
+	user-select: all;
+}
+
+#main-item {
+	display: flex;
+	flex-direction: column;
+	/* background-color: green; */
+	height: 38rem;
+}
+
+#arCxlFees {
+	/* background-color: fuchsia; */
+	height: 36rem;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	font-size: 1.5rem;
+	list-style: none;
+	user-select: all;
+}
+
+.cxl-inputs {
+	/* background-color: gold; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* padding: 1rem; */
+}
+
+.cxl-input {
+	/* width: 13vw; */
+	padding: .5rem;
+	border: none;
+	outline: none;
+	border-radius: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	margin: .5rem auto;
+}
+.cxlCurrency {
+	/* background-color: #2c3e50; */
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem 0;
+}
+
+#cxlEnCurrency {
+	width: 10rem;
+	height: 2rem;
+	outline: none;
+	border-radius: 20px;
+	font-size: 1rem;
+	text-transform: capitalize;
+}
+
+#cxlEnCurrency option {
+	font-size: 1.2rem;
+}
+
+#cxlArCurrency {
+	width: 10rem;
+	height: 2rem;
+	outline: none;
+	border-radius: 20px;
+	font-size: 1.2rem;
+	text-transform: capitalize;
+}
+
+#cxlArCurrency option {
+	font-size: 1.2rem;
+}
+
+.cxl-buttons {
+	/* background-color: indigo; */
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem 0;
+}
+
+.cxl-btn {
+	padding: 1rem;
+	border-radius: 1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 2rem;
+	font-weight: 700;
+	transition: all .5s;
+	width: 35%;
+	box-shadow: 5px 5px 5px 5px black;
+}
+
+.cxl-btn:active {
+	box-shadow: none;
+}
+
+.cxl-btn:hover {
+	opacity: .7;
+}
+
+#clearCxlBtn {
+	background-color: rgb(230, 61, 61);
+}
+
+#calcCxlBtn {
+	background-color: rgb(24, 101, 216);
+}
+
+#cxlResult {
+	/* background-color: rgb(148, 135, 135); */
+	width: 100%;
+	height: 5rem;
+	margin: auto;
+	padding: 1rem;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	border-radius: 1rem;
+	background-color: transparent;
+	box-shadow: 5px 5px 5px 5px rgb(75, 70, 70), -5px -5px 5px 5px rgb(102, 99, 99);
+}
