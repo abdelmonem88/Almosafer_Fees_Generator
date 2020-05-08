@@ -1,5 +1,5 @@
 /* Cancellation*/
-//UI
+//UI inputs
 let cxlAdtPen = document.getElementById('cxlAdtPen');
 let cxlAdtNum = document.getElementById('cxlAdtNum');
 let cxlChdPen = document.getElementById('cxlChdPen');
@@ -20,6 +20,8 @@ let cxlResult = document.getElementById('cxlResult');
 let enCxlFees = document.getElementById('enCxlFees');
 let arCxlFees = document.getElementById('arCxlFees');
 /*Ar*/
+let uiArId = document.getElementById('uiArId');
+let uiArPnr = document.getElementById('uiArPnr');
 let uiArAdtPen = document.getElementById('uiArAdtPen');
 let uiArChdPen = document.getElementById('uiArChdPen');
 let uiArInfPen = document.getElementById('uiArInfPen');
@@ -36,6 +38,8 @@ let uiArPromotion = document.getElementById('uiArPromotion');
 let uiArTotalDeducted = document.getElementById('uiArTotalDeducted');
 let uiArRefundAmount = document.getElementById('uiArRefundAmount');
 /*En*/
+let uiEnId = document.getElementById('uiEnId');
+let uiEnPnr = document.getElementById('uiEnPnr');
 let uiEnAdtPen = document.getElementById('uiEnAdtPen');
 let uiEnChdPen = document.getElementById('uiEnChdPen');
 let uiEnInfPen = document.getElementById('uiEnInfPen');
@@ -84,6 +88,8 @@ function calculate() {
 	let fixedRefundedAmount = refundAmount.toFixed(2);
 	//check
 	if (
+		cxlId.value == '' ||
+		cxlPnr.value == '' ||
 		cxlAdtPen.value == '' ||
 		cxlAdtNum.value == '' ||
 		cxlMosFees.value == '' ||
@@ -96,6 +102,12 @@ function calculate() {
 	} else {
 		cxlResult.innerHTML = `Refunded Amount: ${fixedRefundedAmount} ${cxlEnCurrency.value}`;
 		/* Ar UI*/
+		if (cxlId.value != '') {
+			uiArId.innerHTML = `${cxlId.value} = رمز المسافر`;
+		}
+		if (cxlPnr.value != '') {
+			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للطيران`;
+		}
 		if (cxlAdtPen.value != '0') {
 			uiArAdtPen.innerHTML = `رسوم الطيران للبالغ = ${cxlAdtPen.value} ${cxlArCurrency.value}`;
 		}
@@ -166,6 +178,12 @@ function calculate() {
 			uiArRefundAmount.innerHTML = '';
 		}
 		/* En UI*/
+		if (cxlId.value != '') {
+			uiEnId.innerHTML = `Almosafer ID = ${cxlId.value}`;
+		}
+		if (cxlPnr.value != '') {
+			uiEnPnr.innerHTML = `Airline PNR = ${cxlPnr.value}`;
+		}
 		if (cxlAdtPen.value != '0') {
 			uiEnAdtPen.innerHTML = `Adult Airline Fees = ${cxlAdtPen.value} ${cxlEnCurrency.value}`;
 		}
@@ -267,6 +285,8 @@ function cxlEmptyFields() {
 //Clear Functions
 function cxlClearInputs() {
 	if (
+		cxlId.value == '' &&
+		cxlPnr.value == '' &&
 		cxlAdtPen.value == '' &&
 		cxlAdtNum.value == '' &&
 		cxlChdPen.value == '' &&
@@ -286,6 +306,8 @@ function cxlClearInputs() {
 	) {
 		alert('nothing to clear!');
 	} else {
+		cxlId.value = '';
+		cxlPnr.value = '';
 		cxlAdtPen.value = '';
 		cxlAdtNum.value = '';
 		cxlChdPen.value = '';
@@ -309,6 +331,12 @@ clearBtn.addEventListener('click', cxlClearInputs);
 
 function cxlClearUiFees() {
 	//En
+	if (uiEnId.innerHTML != '') {
+		uiEnId.innerHTML = '';
+	}
+	if (uiEnPnr.innerHTML != '') {
+		uiEnPnr.innerHTML = '';
+	}
 	if (uiEnAdtPen.innerHTML != '') {
 		uiEnAdtPen.innerHTML = '';
 	}
@@ -355,6 +383,12 @@ function cxlClearUiFees() {
 		uiEnRefundAmount.innerHTML = '';
 	}
 	//Ar
+	if (uiArId.innerHTML != '') {
+		uiArId.innerHTML = '';
+	}
+	if (uiArPnr.innerHTML != '') {
+		uiArPnr.innerHTML = '';
+	}
 	if (uiArAdtPen.innerHTML != '') {
 		uiArAdtPen.innerHTML = '';
 	}

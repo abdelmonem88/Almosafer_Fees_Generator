@@ -1,4 +1,6 @@
 //General Variables
+let cxlId = document.getElementById('cxlId');
+let cxlPnr = document.getElementById('cxlPnr');
 let mosafer = document.querySelector('#mf');
 let taxes = document.querySelector('#tax');
 let result = document.querySelector('#result');
@@ -25,6 +27,8 @@ let arabicFees = document.querySelector('#arabic-fees');
 let englishFees = document.querySelector('#english-fees');
 /*ui output variables*/
 //Ar
+let uiArId = document.getElementById('uiArId');
+let uiArPnr = document.getElementById('uiArPnr');
 let uiArAdtAlFees = document.getElementById('uiArAdtAlFees');
 let uiArChdAlFees = document.getElementById('uiArChdAlFees');
 let uiArInfAlFees = document.getElementById('uiArInfAlFees');
@@ -38,6 +42,8 @@ let uiArTotalChdFees = document.getElementById('uiArTotalChdFees');
 let uiArTotalInfFees = document.getElementById('uiArTotalInfFees');
 let uiArTotalForAll = document.getElementById('uiArTotalForAll');
 //En
+let uiEnId = document.getElementById('uiEnId');
+let uiEnPnr = document.getElementById('uiEnPnr');
 let uiEnAdtAlFees = document.getElementById('uiEnAdtAlFees');
 let uiEnChdAlFees = document.getElementById('uiEnChdAlFees');
 let uiEnInfAlFees = document.getElementById('uiEnInfAlFees');
@@ -68,13 +74,26 @@ function calculator() {
 	let finalTotal = totalAdt + totalChd + totalInf;
 	let fixedToatl = finalTotal;
 
-	if (mosafer.value == '' || taxes.value == '' || adtPenalty.value == '' || adtNumber.value == '') {
+	if (
+		cxlId.value == '' ||
+		cxlPnr.value == '' ||
+		mosafer.value == '' ||
+		taxes.value == '' ||
+		adtPenalty.value == '' ||
+		adtNumber.value == ''
+	) {
 		alert('please enter all *mandatory fields!');
 	} else if (chgEnCurrency.value == 'choose currency' || chgArCurrency.value == 'أختر العملة') {
 		alert('please choose currency!');
 	} else {
 		result.innerHTML = `Total Fees:  ${fixedToatl} ${chgEnCurrency.value}`;
 		//Ar
+		if (cxlId.value != '') {
+			uiArId.innerHTML = `${cxlId.value} = رمز المسافر`;
+		}
+		if (cxlPnr.value != '') {
+			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للطيران`;
+		}
 		if (adtPenalty.value != '0') {
 			uiArAdtAlFees.innerHTML = `رسوم الطيران للبالغ = ${adtPenalty.value} ${chgArCurrency.value}`;
 		}
@@ -132,6 +151,12 @@ function calculator() {
 			uiArTotalForAll.innerHTML = `الاجمالي لجميع الأفراد = ${fixedToatl} ${chgArCurrency.value}`;
 		}
 		//En
+		if (cxlId.value != '') {
+			uiEnId.innerHTML = `Almosafer ID = ${cxlId.value}`;
+		}
+		if (cxlPnr.value != '') {
+			uiEnPnr.innerHTML = `Airline PNR = ${cxlPnr.value}`;
+		}
 		if (adtPenalty.value != '0') {
 			uiEnAdtAlFees.innerHTML = `Adult Airline fees = ${adtPenalty.value} ${chgEnCurrency.value}`;
 		}
@@ -220,6 +245,8 @@ function chgEmptyFields() {
 //Clear Function
 function ClearInputs() {
 	if (
+		cxlId.value == '' &&
+		cxlPnr.value == '' &&
 		mosafer.value == '' &&
 		taxes.value == '' &&
 		adtPenalty.value == '' &&
@@ -236,6 +263,8 @@ function ClearInputs() {
 	) {
 		alert('nothing to clear!');
 	} else {
+		cxlId.value = '';
+		cxlPnr.value = '';
 		mosafer.value = '';
 		taxes.value = '';
 		adtPenalty.value = '';
@@ -256,6 +285,12 @@ clear.addEventListener('click', ClearInputs);
 
 function chgClearUiFees() {
 	//Ar
+	if (uiArId.innerHTML != '') {
+		uiArId.innerHTML = '';
+	}
+	if (uiArPnr.innerHTML != '') {
+		uiArPnr.innerHTML = '';
+	}
 	if (uiArAdtAlFees.innerHTML != '') {
 		uiArAdtAlFees.innerHTML = '';
 	}
@@ -293,6 +328,12 @@ function chgClearUiFees() {
 		uiArTotalForAll.innerHTML = '';
 	}
 	//En
+	if (uiEnId.innerHTML != '') {
+		uiEnId.innerHTML = '';
+	}
+	if (uiEnPnr.innerHTML != '') {
+		uiEnPnr.innerHTML = '';
+	}
 	if (uiEnAdtAlFees.innerHTML != '') {
 		uiEnAdtAlFees.innerHTML = '';
 	}

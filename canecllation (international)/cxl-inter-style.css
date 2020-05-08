@@ -34,7 +34,7 @@ input[type=number] {
 }
 
 ::placeholder{
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 /* Canellation Section Start  */
@@ -70,9 +70,9 @@ input[type=number] {
 }
 
 .cxl-header {
-	padding: .5rem;
+	/* padding: .5rem; */
 	text-align: center;
-	font-size: 4rem;
+	font-size: 3rem;
 	letter-spacing: 2px;
 	font-family: 'Dosis', sans-serif !important;
 	/* background-color: lightgrey; */
@@ -134,13 +134,13 @@ input[type=number] {
 
 .cxl-input {
 	/* width: 13vw; */
-	padding: .5rem;
+	padding: .4rem;
 	border: none;
 	outline: none;
 	border-radius: 1rem;
-	font-size: 1rem;
+	font-size:.9rem;
 	text-align: center;
-	margin: .5rem auto;
+	margin: .4rem auto;
 }
 .cxlCurrency {
 	/* background-color: #2c3e50; */

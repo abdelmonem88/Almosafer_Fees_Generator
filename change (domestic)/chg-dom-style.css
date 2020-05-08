@@ -29,6 +29,11 @@ input[type=number] {
 	-moz-appearance: textfield;
 }
 
+::placeholder {
+	font-size: 1rem;
+	text-align: center;
+	line-height: 3rem;
+}
 .fa-arrow-circle-down {
 	position: absolute;
 }
@@ -66,9 +71,9 @@ input[type=number] {
 
 #header {
 	/* background-color: aqua; */
-	padding: 1rem;
+	/* padding: 1rem; */
 	text-align: center;
-	font-size: 4rem;
+	font-size: 3rem;
 	letter-spacing: 2px;
 	font-family: 'Dosis', sans-serif !important;
 }
@@ -134,20 +139,19 @@ input[type=number] {
 	/* padding: 1rem; */
 }
 
+.booking-info{
+	width: 100%;
+	display: flex;
+}
+
 .input {
-	padding: .5rem;
+	padding: .4rem;
 	border: none;
 	outline: none;
 	border-radius: 1rem;
 	font-size: 1rem;
 	text-align: center;
-	margin: 1rem auto;
-}
-
-::placeholder {
-	font-size: 1.2rem;
-	text-align: center;
-	line-height: 3rem;
+	margin: .5rem auto;
 }
 
 .chgCurrency {
