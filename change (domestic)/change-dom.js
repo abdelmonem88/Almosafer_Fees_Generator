@@ -99,7 +99,7 @@ function calculator() {
 			uiArId.innerHTML = `${cxlId.value} = رمز المسافر`;
 		}
 		if (cxlPnr.value != '') {
-			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للطيران`;
+			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للحجز`;
 		}
 		if (adtPenalty.value != '0') {
 			uiArAdtAlFees.innerHTML = `رسوم الطيران للبالغ = ${adtPenalty.value} ${chgArCurrency.value}`;
@@ -165,7 +165,7 @@ function calculator() {
 			uiEnId.innerHTML = `Almosafer ID = ${cxlId.value}`;
 		}
 		if (cxlPnr.value != '') {
-			uiEnPnr.innerHTML = `Airline PNR = ${cxlPnr.value}`;
+			uiEnPnr.innerHTML = `PNR = ${cxlPnr.value}`;
 		}
 		if (adtPenalty.value != '0') {
 			uiEnAdtAlFees.innerHTML = `Adult Airline fees = ${adtPenalty.value} ${chgEnCurrency.value}`;

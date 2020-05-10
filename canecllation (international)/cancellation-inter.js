@@ -75,7 +75,8 @@ function calculate() {
 		parseFloat(cxlUsedFare.value) +
 		parseFloat(serviceFees.value) +
 		parseFloat(promotion.value);
-	let refundAmount = parseFloat(bookingAmount.value) - parseFloat(totalDeducted);
+	let fixedTotalDeducted = totalDeducted.toFixed(2);
+	let refundAmount = parseFloat(bookingAmount.value) - parseFloat(fixedTotalDeducted);
 	let fixedRefundedAmount = refundAmount.toFixed(2);
 	//check
 	if (
@@ -97,7 +98,7 @@ function calculate() {
 			uiArId.innerHTML = `${cxlId.value} = رمز المسافر`;
 		}
 		if (cxlPnr.value != '') {
-			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للطيران`;
+			uiArPnr.innerHTML = `${cxlPnr.value} = الرقم المرجعي للحجز`;
 		}
 		if (cxlAdtPen.value != '0') {
 			uiArAdtPen.innerHTML = `رسوم الطيران للبالغ = ${cxlAdtPen.value} ${cxlArCurrency.value}`;
@@ -155,8 +156,8 @@ function calculate() {
 		} else {
 			uiArPromotion.innerHTML = '';
 		}
-		if (totalDeducted != 0) {
-			uiArTotalDeducted.innerHTML = `إجمالي المبلغ المستقطع = ${totalDeducted} ${cxlArCurrency.value}`;
+		if (fixedTotalDeducted != 0) {
+			uiArTotalDeducted.innerHTML = `إجمالي المبلغ المستقطع = ${fixedTotalDeducted} ${cxlArCurrency.value}`;
 		} else {
 			uiArTotalDeducted.innerHTML = '';
 		}
@@ -170,7 +171,7 @@ function calculate() {
 			uiEnId.innerHTML = `Almosafer ID = ${cxlId.value}`;
 		}
 		if (cxlPnr.value != '') {
-			uiEnPnr.innerHTML = `Airline PNR = ${cxlPnr.value}`;
+			uiEnPnr.innerHTML = `PNR = ${cxlPnr.value}`;
 		}
 		if (cxlAdtPen.value != '0') {
 			uiEnAdtPen.innerHTML = `Adult Airline Fees = ${cxlAdtPen.value} ${cxlEnCurrency.value}`;
@@ -228,8 +229,8 @@ function calculate() {
 		} else {
 			uiEnPromotion.innerHTML = '';
 		}
-		if (totalDeducted != 0) {
-			uiEnTotalDeducted.innerHTML = `Total Deducted Amount = ${totalDeducted} ${cxlEnCurrency.value}`;
+		if (fixedTotalDeducted != 0) {
+			uiEnTotalDeducted.innerHTML = `Total Deducted Amount = ${fixedTotalDeducted} ${cxlEnCurrency.value}`;
 		} else {
 			uiEnTotalDeducted.innerHTML = '';
 		}
